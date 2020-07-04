@@ -4,7 +4,7 @@
 #Change repojitory and update
 echo "change directory to japanese"
 sudo sed -i.bak -e "s/http:\/\/archive\.ubuntu\.com/http:\/\/jp\.archive\.ubuntu\.com/g" /etc/apt/sources.list
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 
 
 #install essential
@@ -13,18 +13,18 @@ sudo apt install -y build-essential
 #git setup
 echo "set up git"
 sudo add-apt-repository ppa:git-core/ppa
-sudo apt update; apt install git
+sudo apt update; apt install -y git
 git config --global user.name "cilarp"
 git config --global user.email "cilarp914@gmail.com"
 echo "You still need to set up ssh keys... Don't forget"
 
 #mono setup
 echo "set up mono"
-sudo apt install gnupg ca-certificates
+sudo apt install -y gnupg ca-certificates
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
 sudo apt update
-sudo apt install mono-devel
+sudo apt install -y mono-devel
 
 #vim set up
 echo "set up vim"
@@ -68,7 +68,7 @@ echo "alias igrep='rg'" >> ~/.bashrc
 
 #install java11
 echo "set up java"
-sudo apt install openjdk-11-jdk
+sudo apt install -y openjdk-11-jdk
 
 #install llvm
 echo "set up llvm"
