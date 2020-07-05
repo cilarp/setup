@@ -53,7 +53,6 @@ cd
 #install rust and setup
 echo "set up rust"
 sudo apt install -y curl lldb
-exit
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
 echo "export PATH="$PATH:~/.cargo/bin"" >> ~/.bashrc
@@ -83,5 +82,4 @@ sudo wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.5-linux
 sudo tar -xvzf julia-1.0.5-linux-x86\_64.tar.gz
 echo "export PATH="$PATH:/opt/julia-1.0.5/bin/"" >> ~/.bashrc
 
-exit
  
