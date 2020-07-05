@@ -9,6 +9,7 @@ sudo apt update && sudo apt upgrade -y
 
 #install essential
 sudo apt install -y build-essential
+sudo apt install neofetch
 
 #git setup
 echo "set up git"
