@@ -55,6 +55,7 @@ sudo apt install -y curl codelldb
 exit
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
+echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc
 rustup component add rls rust-analysis rust-src
 cargo install exa hexyl procs fd-find ripgrep bat
 echo "alias ils='exa'" >> ~/.bashrc
@@ -79,7 +80,7 @@ echo "set up julia"
 cd /opt
 sudo wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.5-linux-x86_64.tar.gz
 sudo tar -xvzf julia-1.0.5-linux-x86\_64.tar.gz
-export PATH="$PATH:/opt/julia-1.0.5/bin"
+echo "export PATH=$PATH:/opt/julia-1.0.5/bin/" >> ~/.bashrc
 
 exit
  
