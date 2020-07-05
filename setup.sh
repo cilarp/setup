@@ -14,8 +14,8 @@ sudo apt install -y build-essential
 echo "set up git"
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update; apt install -y git
-git config --global user.name "cilarp"
-git config --global user.email "cilarp914@gmail.com"
+git config --global user.name "example"
+git config --global user.email "example@example.com"
 echo "You still need to set up ssh keys... Don't forget"
 
 #mono setup
