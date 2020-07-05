@@ -52,7 +52,7 @@ cd
 
 #install rust and setup
 echo "set up rust"
-sudo apt install -y curl codelldb
+sudo apt install -y curl lldb
 exit
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
