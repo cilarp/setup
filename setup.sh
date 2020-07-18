@@ -57,14 +57,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
 rustup component add rls rust-analysis rust-src
 cargo install exa hexyl procs fd-find ripgrep bat
-echo "alias ils='exa'" >> ~/.bashrc
-echo "alias ila='exa -a'" >> ~/.bashrc
-echo "alias ill='exa -ahl --git'" >> ~/.bashrc 
-echo "alias icat='bat'"  >> ~/.bashrc 
-echo "alias iod='hexyl'" >> ~/.bashrc 
-echo "alias ips='procs'" >> ~/.bashrc 
-echo "alias ifind='fd'" >> ~/.bashrc 
-echo "alias igrep='rg'" >> ~/.bashrc 
+echo "alias ils='exa'"             >> ~/.bashrc
+echo "alias ila='exa -a'"          >> ~/.bashrc
+echo "alias ill='exa -ahl --git'"  >> ~/.bashrc 
+echo "alias icat='bat'"            >> ~/.bashrc 
+echo "alias iod='hexyl'"           >> ~/.bashrc 
+echo "alias ips='procs'"           >> ~/.bashrc 
+echo "alias ifind='fd'"            >> ~/.bashrc 
+echo "alias igrep='rg'"            >> ~/.bashrc 
 
 #install java11
 echo "set up java"
@@ -85,13 +85,13 @@ cd powerline-shell
 python setup.py install
 
 
-echo "function _update_ps1() {" >> ~/.bashrc
-echo "    PS1=$(powerline-shell $?)" >> .bashrc
-echo "}" >> .bashrc
-echo "" >> .bashrc
-echo "if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then" >> .bashrc
-echo "    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"" >> .bashrc
-echo "fi" >> .bashrc
+echo "function _update_ps1() {"                                           >> ~/.bashrc
+echo "    PS1=$(powerline-shell $?)"                                      >> ~/.bashrc
+echo "}"                                                                  >> ~/.bashrc
+echo ""                                                                   >> ~/.bashrc
+echo "if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then"  >> ~/.bashrc
+echo "    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND""                  >> ~/.bashrc
+echo "fi"                                                                 >> ~/.bashrc
 
 
 cd /opt
