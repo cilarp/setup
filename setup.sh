@@ -15,8 +15,8 @@ sudo apt install neofetch
 echo "set up git"
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update; apt install -y git
-git config --global user.name "example"
-git config --global user.email "example@example.com"
+git config --global user.name "cilarp"
+git config --global user.email "cilarp914@gmail.com"
 echo "You still need to set up ssh keys... Don't forget"
 
 #mono setup
@@ -55,7 +55,6 @@ echo "set up rust"
 sudo apt install -y curl lldb
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
-echo "export PATH="$PATH:~/.cargo/bin"" >> ~/.bashrc
 rustup component add rls rust-analysis rust-src
 cargo install exa hexyl procs fd-find ripgrep bat
 echo "alias ils='exa'" >> ~/.bashrc
@@ -75,11 +74,46 @@ sudo apt install -y openjdk-11-jdk
 echo "set up llvm"
 sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 
-#install julia 1.0.5-lts
-echo "set up julia"
-cd /opt
-sudo wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.5-linux-x86_64.tar.gz
-sudo tar -xvzf julia-1.0.5-linux-x86\_64.tar.gz
-echo "export PATH="$PATH:/opt/julia-1.0.5/bin/"" >> ~/.bashrc
 
  
+#install powerline-shell
+
+cd /opt
+sudo git clone https://github.com/b-ryan/powerline-shell
+sudo apt isntall python3-setuptools python-setuptools
+cd powerline-shell
+python setup.py install
+
+
+echo "function _update_ps1() {" >> ~/.bashrc
+echo "    PS1=$(powerline-shell $?)" >> .bashrc
+echo "}" >> .bashrc
+echo "" >> .bashrc
+echo "if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then" >> .bashrc
+echo "    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"" >> .bashrc
+echo "fi" >> .bashrc
+
+
+cd /opt
+sudo git clone https://github.com/powerline/fonts
+cd fonts
+sudo ./install.sh
+
+
+#Macbuntu
+sudo add-apt-repository ppa:noobslab/macbuntu
+sudo apt update
+sudo apt-get install macbuntu-os-icons-v1804
+sudo apt-get install macbuntu-os-ithemes-v1804
+sudo apt-get install slingscold
+sudo apt-get install albert
+sudo apt-get install macbuntu-os-plank-theme-v1804
+
+
+#install software
+cd ~/Download
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+wget https://go.microsoft.com/fwlink/?LinkID=760868
+wget https://discord.com/api/download?platform=linux&format=deb
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.7.0-amd64.deb
+wget https://file-fevwnujbqw.now.sh/Chirp-linux-x64.zip
