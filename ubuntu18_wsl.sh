@@ -1,5 +1,5 @@
 #! /bin/bash
-bash ./setup.sh
+bash ./ubuntu.sh
 cd
 dircolors -p > .dircolors
 echo "please set up your dircolor"
