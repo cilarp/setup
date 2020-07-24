@@ -28,7 +28,7 @@ sudo pacman -S nodejs npm
 sudo pacman -S docker
 
 #install wine 
-wine winetricks
+sudo pacman -S wine winetricks
 
 #install util
 sudo pacman -S evince atool rhythmbox neofetch plank
