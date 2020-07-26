@@ -11,7 +11,7 @@ sudo pacman -S go
 export GOPATH=~/workspace/go/
 
 #install vscode and git client
-sudo snap install code
+sudo snap install code --classic
 sudo snap install gitkraken --classic
 
 #install neovim
