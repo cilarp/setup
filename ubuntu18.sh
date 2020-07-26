@@ -23,7 +23,7 @@ sudo apt install -y curl lldb
 sudo apt install -y openjdk-11-jdk
 sudo apt install -y texlive-full
 sudo apt install -y macbuntu-os-icons-v1804 macbuntu-os-ithemes-v1804 slingscold albert macbuntu-os-plank-theme-v1804
-sudo apt isntall -y python3-setuptools python-setuptools
+sudo apt install -y python3-setuptools python-setuptools
 
 #mono: install and setup
 echo "set up mono"
