@@ -16,7 +16,7 @@ cd $origin
 bash ./ubuntu18/git.sh
 bash ./common/git.sh
 
-#install llvm
+#llvm: install
 cd $origin
 bash ./ubuntu18/llvm.sh
 
@@ -45,7 +45,7 @@ sudo apt install -y openjdk-11-jdk
 cd $origin
 bash ./ubuntu18/latex.sh
 
-#install powerline
+#powerline: install
 sudo apt install -y python3-setuptools python-setuptools
 cd $origin
 bash ./common/powerline.sh
