@@ -10,9 +10,8 @@ sudo ln -s /var/lib/snapd/snap /snap
 sudo pacman -S go
 export GOPATH=~/workspace/go/
 
-#install vscode and git client
+#install vscode
 sudo snap install code --classic
-sudo snap install gitkraken --classic
 
 #install neovim
 pip3 install pynvim
@@ -31,7 +30,7 @@ sudo pacman -S docker
 sudo pacman -S wine winetricks
 
 #install util
-sudo pacman -S evince atool rhythmbox neofetch plank
+sudo pacman -S atool neofetch plank
 git clone https://aur.archlinux.org/ulauncher.git && cd ulauncher && makepkg -is
 
 #install discord
