@@ -19,7 +19,7 @@ bash ./ubuntu18/git.sh
 bash ./common/git.sh
 
 #llvm: install
-read -n1 -p "do u wanna install mono? (y/N): " yn
+read -n1 -p "do u wanna install llvm? (y/N): " yn
 cd $origin
 if [[ $yn = [yY] ]]; then
     bash ./ubuntu18/llvm.sh
