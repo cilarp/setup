@@ -1,7 +1,6 @@
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
 rustup component add rls rust-analysis rust-src
-sudo apt install -y libssl-dev
 
 read -n1 -p "do u wanna install exa? (y/N): " yn
 echo ""
