@@ -66,4 +66,10 @@ if [[ $yn = [yY] ]]; then
     cargo install cargo-generate
 fi
 
+read -n1 -p "do u wanna install cargo-edit? (y/N): " yn
+echo ""
+if [[ $yn = [yY] ]]; then
+    cargo install cargo-edit
+fi
+
 curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
