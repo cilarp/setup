@@ -4,7 +4,7 @@ origin=$(pwd)
 #Change repojitory and update
 bash ./ubuntu18/ch_repo_to_jp.sh
 
-read -n1 -p "ok? (y/N): " yn
+read -n1 -p "do u wanna install lldb? (y/N): " yn
 if [[ $yn = [yY] ]]; then
     sudo apt install -y lldb 
 fi
