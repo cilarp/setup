@@ -41,6 +41,8 @@ echo ""
 read -n1 -p "do u wanna install rust? (y/N): " yn
 cd $origin
 if [[ $yn = [yY] ]]; then
+    sudo apt install -y libssl-dev
+    sudo apt-get install pkg-config
     sudo apt install -y curl
     bash ./common/rust.sh
 fi
